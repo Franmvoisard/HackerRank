@@ -17,7 +17,7 @@ void print_array(const vector<int>&);
 void insertionSort1(int n, vector<int> arr) {
    int lastElement = arr[n-1]; //Take the last element.
     
-   for (int i = n - 1; i > 0; i--){
+   for (int i = n - 1; i >= 0; i--){
         if(arr[i-1] < lastElement){
             arr[i] = lastElement;
         }
