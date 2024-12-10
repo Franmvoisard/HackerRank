@@ -15,16 +15,17 @@ void print_array(const vector<int>&);
  */
 
 void insertionSort1(int n, vector<int> arr) {
-    int lastElement = arr[n - 1];
+   int lastElement = arr[n-1]; //Take the last element.
     
-    int i = n - 2;
-    while(i >= 0 && arr[i] > lastElement){
-        arr[i+1] = arr[i];
+   for (int i = n - 1; i > 0; i--){
+        if(arr[i-1] < lastElement){
+            arr[i] = lastElement;
+        }
+        else {
+            arr[i] = arr[i-1];
+        }
         print_array(arr);
-        i--;
-    }  
-    arr[i+1] = lastElement;
-    print_array(arr);
+   }
 }
 
 void print_array(const vector<int>& arr){
